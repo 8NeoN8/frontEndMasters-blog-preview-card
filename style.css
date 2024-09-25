@@ -17,9 +17,13 @@
   position: absolute;
   top: 	0;
   left: 0;
-  max-width: 375px;
   z-index: 10;
-  opacity: 0.5;
+  opacity: 0;
+  display: none;
+}
+
+.toggle{
+  display: none;
 }
 
 .main-container{
@@ -54,7 +58,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .card-img{
@@ -66,7 +70,6 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  background-color: purple;
   height: 50%;
 }
 
@@ -89,22 +92,31 @@
 }
 
 .card-title{
-  background-color: yellowgreen;
   width: 100%;
   padding-left: 0.1rem;
   font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-title:hover{
+  cursor: pointer;
+  color: var(--yellow);
 }
 
 .card-description{
-  background-color: aqua;
+  text-align: left;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  margin-bottom: 2rem;
 }
 
 .user-widget{
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: 0.7rem;
-  background-color: gray;
+  gap: 0.85rem;
+  font-weight: 800;
 }
 
 .user-avatar{
@@ -137,4 +149,59 @@
   top: 0;
   left: 0;
   z-index: 23;
+}
+
+@media screen and (min-width: 1200px){
+  .card{
+    width: 24rem;
+    height: 32.7rem;
+    margin-bottom: 1.62rem;
+    justify-content: left;
+    margin-bottom: 0.5rem;
+    padding-top: 1.7rem;
+  }
+
+  .card-img-container{
+    margin-bottom: 1.6rem;
+  }
+
+  .card-img{
+    width: 100%;
+  }
+
+  .state-widget{
+    width: 5.1rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+  }
+  .date-widget{
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+  }
+  .card-title{
+
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .card-description{
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .user-widget{
+    gap: 0.65rem;
+  }
+
+  .user-name{
+    font-size: 0.95rem;
+  }
+
+  .user-avatar{
+    width: 1.95rem;
+  }
 }
